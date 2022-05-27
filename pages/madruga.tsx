@@ -4,8 +4,6 @@ import Image from 'next/image'
 
 import styles from '../styles/Madruga.module.scss'
 
-import { Header } from '../components/header/Header'
-
 const Madruga: NextPage = () => {
     return (
         <div className={styles.container}>
