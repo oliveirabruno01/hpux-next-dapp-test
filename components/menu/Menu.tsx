@@ -3,7 +3,6 @@ import styles from "./Menu.module.scss"
 
 import { MenuItem } from "../menuItem/MenuItem"
 
-
 export function Menu() {
     return (
         <div className={styles.content}>

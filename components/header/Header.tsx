@@ -5,9 +5,10 @@ import styles from "./Header.module.scss"
 
 import { Menu } from '../menu/Menu'
 
+import { useSwipeable } from 'react-swipeable'
+
 export function Header() {
     const [sidebar, setSidebar] = useState(false)
-
     const showSidebar = () => setSidebar(!sidebar)
 
     const contentClassname = sidebar ?
@@ -15,11 +16,27 @@ export function Header() {
         : styles.menuContainer;
 
     const buttonClassname = sidebar ? 
-    `${styles.navIcon} ${styles.open}`
-    : styles.navIcon;
+        `${styles.navIcon} ${styles.open}`
+        : styles.navIcon;
     
+    const handlers = useSwipeable({
+        trackMouse: true,
+        onSwipedRight: () => {
+            if (!sidebar) {
+                showSidebar()
+            }
+        },
+    
+        onSwipedLeft: () => {
+            if (sidebar) {
+                showSidebar()
+            }
+        },
+        });
+        
     return (
         <div className={styles.container}>
+            <div className={styles.pageContent} {...handlers}></div>
             <div className={styles.header}></div>
             <div className={contentClassname}><Menu></Menu></div>
             <div className={buttonClassname} onClick={showSidebar}>

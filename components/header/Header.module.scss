@@ -8,7 +8,14 @@ $animation: 2s ease both;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 3rem;
+
+    .pageContent {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+    }
 
     .header { 
         position: fixed;
