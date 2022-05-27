@@ -1,8 +1,26 @@
-.content {
-    display: flex;
-    justify-content: center;
-    
-    h2 {
-        color: var(--primary-color);
+.content  {
+
+    .titleContent {
+        display: flex;
+        justify-content: center;
+        
+        h2 {
+            color: var(--primary-color);
+        }
+    }
+
+    .menuNav {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        h2 {
+            color: aliceblue;
+            margin: 0.5rem;
+            padding: 0 1rem;
+        }
     }
 }
+
+
+

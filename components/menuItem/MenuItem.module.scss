@@ -1,0 +1,19 @@
+.menuItem {
+    margin: .5rem;
+    padding: 0;
+
+    border: 2px;
+    border-radius: 17.1px;
+
+    cursor: pointer;
+
+    transition: ease-in-out .6s;
+}
+
+.menuItem:hover {
+    background-color: #2f2f2f;
+    
+    h2, h3, h4, h5, h6 {
+        color: bisque;
+    }
+}
