@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div>
-      <div id="header"><Header/></div>
+      <Header/>
       <Component {...pageProps}/>
     </div>
   )

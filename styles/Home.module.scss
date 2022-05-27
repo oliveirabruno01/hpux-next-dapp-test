@@ -1,6 +1,10 @@
 .container {
+
+  .header {
+    position: fixed;
+  }
+
   .imageBanner {
-    margin-top: 3rem;
     display: block;
     width: 100%;
   }
