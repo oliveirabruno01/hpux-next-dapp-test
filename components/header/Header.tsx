@@ -20,6 +20,10 @@ export function Header() {
         `${styles["nav-open"]} ${styles.menuContainer}`
         : styles.menuContainer;
 
+    const outsideClassname = sidebar ?
+        `${styles.outsideContainer}`
+        : `${styles["hide"]} ${styles.outsideContainer}`;
+
     const buttonClassname = sidebar ? 
         `${styles.navIcon} ${styles.open}`
         : styles.navIcon;
@@ -45,7 +49,7 @@ export function Header() {
             <div className={styles.pageContent} {...handlers}></div>
             <div className={styles.header}></div>
             <div className={contentClassname} onClick={toggleSidebar}><Menu></Menu></div>
-            <div className={styles.outsideContainer} onClick={closeSidebarIfOpened}></div>
+            <div className={outsideClassname} onClick={closeSidebarIfOpened}></div>
             <div className={buttonClassname} onClick={toggleSidebar}>
                 <span></span>
                 <span></span>
