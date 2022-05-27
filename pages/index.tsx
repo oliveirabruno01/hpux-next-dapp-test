@@ -5,8 +5,6 @@ import styles from '../styles/Home.module.scss'
 
 import bannerImg from '../public/images/wild_night_club_by_arsenixc_dalmmwa.jpg'
 
-import { Header } from '../components/header/Header'
-
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
