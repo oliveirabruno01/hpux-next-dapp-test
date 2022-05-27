@@ -7,7 +7,6 @@ import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const toggleMenu = () => setMenuIsOpen(menuIsOpen)
 
   return (
     <div>

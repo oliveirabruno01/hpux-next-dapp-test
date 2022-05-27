@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 
+import { Header } from '../components/header/Header'
+
 import bannerImg from '../public/images/wild_night_club_by_arsenixc_dalmmwa.jpg'
 
 const Home: NextPage = () => {
