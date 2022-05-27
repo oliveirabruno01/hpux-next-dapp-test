@@ -42,6 +42,16 @@ $animation: 2s ease both;
         z-index: 3;
     }
 
+    .outsideContainer {
+        position: fixed;
+        top: 0;
+        left: 300px;
+        height: 100%;
+        width: 100%;
+
+        z-index: 10;
+    }
+
     .nav-open {
         position: fixed;
         left: 0px;

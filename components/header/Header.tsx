@@ -9,7 +9,12 @@ import { useSwipeable } from 'react-swipeable'
 
 export function Header() {
     const [sidebar, setSidebar] = useState(false)
-    const showSidebar = () => setSidebar(!sidebar)
+    const toggleSidebar = () => setSidebar(!sidebar)
+    const closeSidebarIfOpened = () => {
+        if (sidebar) {
+            toggleSidebar()
+        }
+    }
 
     const contentClassname = sidebar ?
         `${styles["nav-open"]} ${styles.menuContainer}`
@@ -23,23 +28,25 @@ export function Header() {
         trackMouse: true,
         onSwipedRight: () => {
             if (!sidebar) {
-                showSidebar()
+                toggleSidebar()
             }
         },
     
         onSwipedLeft: () => {
             if (sidebar) {
-                showSidebar()
+                toggleSidebar()
             }
         },
-        });
+    });
+
         
     return (
         <div className={styles.container}>
             <div className={styles.pageContent} {...handlers}></div>
             <div className={styles.header}></div>
-            <div className={contentClassname}><Menu></Menu></div>
-            <div className={buttonClassname} onClick={showSidebar}>
+            <div className={contentClassname} onClick={toggleSidebar}><Menu></Menu></div>
+            <div className={styles.outsideContainer} onClick={closeSidebarIfOpened}></div>
+            <div className={buttonClassname} onClick={toggleSidebar}>
                 <span></span>
                 <span></span>
                 <span></span>

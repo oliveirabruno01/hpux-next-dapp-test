@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app'
 
 import { Header } from '../components/header/Header'
 
-import { useSwipeable } from 'react-swipeable'
 import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
