@@ -4,7 +4,7 @@ import React from "react"
 
 import styles from "./Footer.module.scss"
 
-import trainImg from "../../public/images/crazy_train3.png"
+import trainImg from "../../public/images/crazy_train-crossing.png"
 
 type Props = {
     href: string,
