@@ -35,26 +35,21 @@ export function Header() {
                 toggleSidebar()
             }
         },
-    
-        onSwipedLeft: () => {
-            if (sidebar) {
-                toggleSidebar()
-            }
-        },
     });
 
         
     return (
         <div className={styles.container}>
-            <div className={styles.pageContent} {...handlers}></div>
             <div className={styles.header}></div>
             <div className={contentClassname} onClick={toggleSidebar}><Menu></Menu></div>
-            <div className={outsideClassname} onClick={closeSidebarIfOpened}></div>
             <div className={buttonClassname} onClick={toggleSidebar}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            <div className={outsideClassname} onClick={closeSidebarIfOpened}></div>
+            <div className={styles.pageContent} {...handlers}></div>
+
             
             <div className={styles.webOnly}>
                 <h2 className={styles.title}>Homem Primata Underground</h2>

@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.scss'
 import { Header } from '../components/header/Header'
 
 import bannerImg from '../public/images/wild_night_club_by_arsenixc_dalmmwa.jpg'
+import discoImg from '../public/images/disco.png'
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,32 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h2 className={styles.welcome}>SEJAM BEM VINDOS AO<br></br>ENCONTRO DOS HOMENS PRIMATAS</h2>
+        <p>
+          HPUX é uma coleção de 50,000 NFT representados por discos de vinis de aparência única,
+          colecionáveis digitais que habitarão a rede blockchain.
+          
+          
+          
+          <br/>
+          Seus discos NFT funcionarão principalmente como royalties musicais do álbum
+          sendo feita à cada N meses, a distribuição justa de XX.X% dos royalties aos proprietários de HPUX.
+          As unidades de HPUX também darão acesso exclusivo à benefícios e conteúdos, por exemplo: acesso à colecionáveis, airdrops, mídias, jogos e experiências de metaverso. 
+        </p>
+        <p>
+        O dinheiro arrecadado com a emissão de HPUX será utilizado em campanhas de publicidade e parcerias, com o objetivo de popularizar as músicas do álbum, e o próprio artista, que já tem mais de 100 músicas autorais, inclusive com um novo
+        álbum em desenvolvimento.
+        </p>
+
+        <div className={styles.card}>
+          <Image 
+          src={discoImg}></Image> 
+          <div className={styles.cardContent}>
+            Cada HPUX
+            será único e gerado no momento de sua emissão de forma aleatória, 
+            uma combinação de 15 características cada qual com dezenas de possibilidades,
+            para que ao final do período de emissão cada uma seja especialmente única.
+          </div>
+        </div>
       </main>
     </div>
   )
