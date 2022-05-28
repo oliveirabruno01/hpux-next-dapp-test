@@ -12,9 +12,11 @@ export function Header() {
     const [sidebar, setSidebar] = useState(false)
     const toggleSidebar = () => setSidebar(!sidebar)
 
+    const listening = true
+
     /* to close on outlayer touch */
     const closeSidebarIfOpened = () => {
-        if (sidebar) {
+        if (sidebar && listening) {
             toggleSidebar()
         }
     }
@@ -59,8 +61,8 @@ export function Header() {
                 <span></span>
                 <span></span>
             </div>
-            <div className={outsideClassname} onClick={closeSidebarIfOpened}></div>
-            <div className={styles.pageContent} {...handlers}></div>
+            {/* <div className={outsideClassname} onClick={closeSidebarIfOpened}></div> */}
+            <div className={styles.pageContent} {...handlers} onClick={closeSidebarIfOpened}></div>
 
             
             <div className={styles.webOnly}>
