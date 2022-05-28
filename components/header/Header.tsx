@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 
 import styles from "./Header.module.scss"
 
-import { Menu } from '../menu/Menu'
+import { Menu } from './menu/Menu'
 
 import { useSwipeable } from 'react-swipeable'
 
