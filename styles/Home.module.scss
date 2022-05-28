@@ -72,6 +72,10 @@
     .card {
       width: 100%;
       flex-direction: column;
+
+      .cardContent {
+        margin: auto;
+      }
     }
   }
 }
