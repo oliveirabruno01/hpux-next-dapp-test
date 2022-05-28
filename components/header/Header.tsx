@@ -8,30 +8,42 @@ import { Menu } from './menu/Menu'
 import { useSwipeable } from 'react-swipeable'
 
 export function Header() {
+    /* sidebar state and getter */
     const [sidebar, setSidebar] = useState(false)
     const toggleSidebar = () => setSidebar(!sidebar)
+
+    /* to close on outlayer touch */
     const closeSidebarIfOpened = () => {
         if (sidebar) {
             toggleSidebar()
         }
     }
 
+    /* css dynamic classes for show/hide menu */
     const contentClassname = sidebar ?
         `${styles["nav-open"]} ${styles.menuContainer}`
         : styles.menuContainer;
 
+    /* css dynamic classes for outside container*/
     const outsideClassname = sidebar ?
         `${styles.outsideContainer}`
         : `${styles["hide"]} ${styles.outsideContainer}`;
 
+    /* css menu button d classes */
     const buttonClassname = sidebar ? 
         `${styles.navIcon} ${styles.open}`
         : styles.navIcon;
     
+    /* swipe gestures handler with react-swipeable */
     const handlers = useSwipeable({
         trackMouse: true,
         onSwipedRight: () => {
             if (!sidebar) {
+                toggleSidebar()
+            }
+        },
+        onSwipedLeft: () => {
+            if (sidebar) {
                 toggleSidebar()
             }
         },
