@@ -41,8 +41,8 @@
   .card {
     display: flex;
     flex-direction: row;
-    margin: 1rem;
-    padding: 1.5rem;
+    margin: 1rem .75rem;
+    padding: 1.5rem 1rem;
     text-align: left;
     border-radius: 10px;
     border: 1px solid #eaeaea;
@@ -68,8 +68,8 @@
     }
   }
 
-  @media (max-width: 600px) {
-    .grid {
+  @media (max-width: 312px) {
+    .card {
       width: 100%;
       flex-direction: column;
     }
