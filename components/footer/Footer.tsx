@@ -4,7 +4,7 @@ import React from "react"
 
 import styles from "./Footer.module.scss"
 
-import trainImg from "../../public/images/crazy_train-crossing.png"
+import trainImg from "../../public/images/crazy_train-crossing-with-lights.png"
 
 type Props = {
     href: string,
@@ -23,6 +23,10 @@ export const LinkItem: React.FC<Props> = ({
 export function Footer() {
     return (
         <div className={styles.footer}>
+            <div className={styles.lamps}>
+                <div className={styles.lamp}>*</div>
+                <div className={styles.lamp}>*</div>
+            </div>
             <Image src={trainImg} className={styles.train}></Image>
             <div className={styles.container}>
                 <div className={styles.vision}>
