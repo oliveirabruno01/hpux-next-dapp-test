@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { FaBars } from 'react-icons/fa'
+
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from "./Header.module.scss"
 
@@ -51,25 +53,49 @@ export function Header() {
         },
     });
 
-        
-    return (
-        <div className={styles.container}>
-            <div className={styles.header}></div>
-            <div className={contentClassname} onClick={toggleSidebar}><Menu></Menu></div>
-            <div className={buttonClassname} onClick={toggleSidebar}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            {/* <div className={outsideClassname} onClick={closeSidebarIfOpened}></div> */}
-            <div className={styles.pageContent} {...handlers} onClick={closeSidebarIfOpened}></div>
+    let route = useRouter().pathname
+    console.log(route)
 
-            
-            <div className={styles.webOnly}>
-                <h2 className={styles.title}>Homem Primata Underground</h2>
+    const homeLinkClass = route == "/" ?
+        `${styles.link} ${styles.active}`
+        : `${styles.link}`
+    
+    const madrugaLinkClass = route == "/madruga" ?
+        `${styles.link} ${styles.active}`
+        : `${styles.link}`
+
+    const roadmapLinkClass = route == "/roadmap" ?
+        `${styles.link} ${styles.active}`
+        : `${styles.link}`
+
+    const mintLinkClass = route == "/mint" ?
+        `${styles.link} ${styles.active}`
+        : `${styles.link}`
+
+    
+    return (
+        <div className="header">
+            <div className={styles.pageContent} {...handlers} onClick={closeSidebarIfOpened}></div>
+            <div className={`${styles.container} ${styles.mobileOnly}`}>
+                <div className={styles.header}></div>
+                <div className={contentClassname} onClick={toggleSidebar}><Menu></Menu></div>
+                <div className={buttonClassname} onClick={toggleSidebar}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                {/* <div className={outsideClassname} onClick={closeSidebarIfOpened}></div> */}
+
+                <h2 className={`${styles.title} ${styles.mobileOnly}`}>HPUX</h2>
             </div>
-            <div className={styles.mobileOnly}>
-                <h2 className={styles.title}>HPUX</h2>
+            <div className={`${styles.container} ${styles.webOnly}`}>
+                <h2 className={`${styles.title} ${styles.webOnly}`}>Homem Primata Underground</h2>
+                <div className={styles.navLinks}>
+                    <Link href="/"><a className={homeLinkClass}>SOBRE</a></Link>
+                    <Link href="/madruga"><a className={madrugaLinkClass}>ARTISTA</a></Link>
+                    <Link href="/roadmap"><a className={roadmapLinkClass}>ROADMAP</a></Link>
+                    <Link href="/mint"><a className={mintLinkClass}>NFT</a></Link>
+                </div>
             </div>
         </div>
     )

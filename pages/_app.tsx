@@ -9,11 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div>
-      <Header/>
-
       <Component {...pageProps}/>
-
-      <Footer/>
     </div>
   )
 }

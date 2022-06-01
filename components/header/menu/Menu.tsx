@@ -12,9 +12,8 @@ export function Menu() {
             <div className={styles.menuNav}>
                 <MenuItem href="/"><h2>Sobre o projeto</h2></MenuItem>
                 <MenuItem href="/madruga"><h2>Madruga Blues</h2></MenuItem>
-                <MenuItem href="/"><h2>Roadmap</h2></MenuItem>
-                <MenuItem href="/"><h2>Primitive Blocks</h2></MenuItem>
-                <MenuItem href="/"><h2>EMITIR NFT</h2></MenuItem>
+                <MenuItem href="/roadmap"><h2>Roadmap</h2></MenuItem>
+                <MenuItem href="/mint"><h2>EMITIR NFT</h2></MenuItem>
             </div>
         </div>
     )

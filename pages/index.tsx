@@ -7,6 +7,7 @@ import { Header } from '../components/header/Header'
 
 import bannerImg from '../public/images/wild_night_club_by_arsenixc_dalmmwa.jpg'
 import discoImg from '../public/images/disco.png'
+import { Footer } from '../components/footer/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header></Header>
       <div className={styles.imageBanner}>
         <Image
         src={bannerImg}
@@ -52,6 +54,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
+
+      <Footer></Footer>
     </div>
   )
 }
