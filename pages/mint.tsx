@@ -28,8 +28,22 @@ const Mint: NextPage = () => {
                 </span>
 
                 <Card>
-                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
-                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
+                    <CardTitle><h3>Informações sobre a coleção:</h3></CardTitle>
+                    <CardContent>
+                        <h4>DISCOS EMITIDOS: 0/50.000</h4>
+                        <h4>FASE ATUAL: 0/10</h4>
+                        <h4>PRÓXIMA FASE: 10.000</h4>
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardTitle><h3>Informações sobre a encruzilhada:</h3></CardTitle>
+                    <CardContent>
+                        <h4>DISCOS EMITIDOS AQUI: 0</h4>
+                        <h4>TEMPO RESTANTE: 00,00s</h4>
+                        <h4>PESSOAS ONLINE: 0</h4>
+                        <h4>ID: 0</h4>
+                    </CardContent>
                 </Card>
 
                 <Card>
@@ -37,20 +51,6 @@ const Mint: NextPage = () => {
                     <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
                 </Card>
 
-                <Card>
-                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
-                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
-                </Card>
-
-                <Card>
-                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
-                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
-                </Card>
-
-                <Card>
-                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
-                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
-                </Card>
             </div>
             <MapWithNoSSR/>
         </div>
