@@ -110,7 +110,7 @@ $animation: 2s ease both;
 
 
 /*  MOBILE ONLY */
-@media (max-width: 989px) {
+@media (max-width: 1013px) {
     .webOnly {
         display: none;
     }
@@ -121,7 +121,7 @@ $animation: 2s ease both;
 }
 
 /* WEB ONLY */
-@media (min-width: 990px) {
+@media (min-width: 1012px) {
     .mobileOnly {
         display: none;
     }
