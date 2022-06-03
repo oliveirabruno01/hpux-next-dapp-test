@@ -6,18 +6,7 @@ import Head from 'next/head'
 
 import styles from '../styles/Mint.module.scss'
 
-type CardProps = {
-    children?: JSX.Element | JSX.Element[],
-}
-
-const Card = (props: CardProps) => {
-    return (
-        <div className={styles.card}>{props.children}</div>
-    )
-}
-
-Card.Title = (props: CardProps) => <div className={styles.cardTitle}>{props.children}</div>
-Card.Content = (props: CardProps) => <div className={styles.cardContent}>{props.children}</div>
+import { Card, CardTitle, CardContent } from '../components/card/Card'
 
 const Mint: NextPage = () => {
     const MapWithNoSSR = dynamic(() => import("../components/map/Map"), {
@@ -39,28 +28,28 @@ const Mint: NextPage = () => {
                 </span>
 
                 <Card>
-                    <Card.Title><h3>Lorem, ipsum dolor.</h3></Card.Title>
-                    <Card.Content><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></Card.Content>
+                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
+                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
                 </Card>
 
                 <Card>
-                    <Card.Title><h3>Lorem, ipsum dolor.</h3></Card.Title>
-                    <Card.Content><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></Card.Content>
+                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
+                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
                 </Card>
 
                 <Card>
-                    <Card.Title><h3>Lorem, ipsum dolor.</h3></Card.Title>
-                    <Card.Content><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></Card.Content>
+                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
+                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
                 </Card>
 
                 <Card>
-                    <Card.Title><h3>Lorem, ipsum dolor.</h3></Card.Title>
-                    <Card.Content><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></Card.Content>
+                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
+                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
                 </Card>
 
                 <Card>
-                    <Card.Title><h3>Lorem, ipsum dolor.</h3></Card.Title>
-                    <Card.Content><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></Card.Content>
+                    <CardTitle><h3>Lorem, ipsum dolor.</h3></CardTitle>
+                    <CardContent><h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4></CardContent>
                 </Card>
             </div>
             <MapWithNoSSR/>
