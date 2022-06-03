@@ -20,11 +20,6 @@
       flex-direction: row;
       justify-content: space-around;
 
-      padding: 0 0.5rem;
-
-      h4 {
-        max-width: 20%;
-      }
 
       * {
         margin: 0.5rem;
@@ -33,7 +28,23 @@
     }
   
     * {
-      margin: 0;
-      padding: 0;
+      margin: .2rem;
+      padding: 0.5rem;
     }
   }
+
+@media (max-width: 968px) {
+  .card {
+    padding: 0.2rem;
+    margin: 0;
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .cardContent {
+      flex-direction: column;
+    }
+  }
+}
