@@ -20,7 +20,6 @@ const Map: React.FC<MapProps> = ({}) => {
       center={LatLng}
       zoom={22}
       scrollWheelZoom={false}
-      on
       style={{ height: "100%", width: "80%" }}
     >
       <TileLayer
