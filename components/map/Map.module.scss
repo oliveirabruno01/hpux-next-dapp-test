@@ -1,0 +1,26 @@
+.card {
+    z-index: 1000;
+    background-color: aqua;
+    height: 100vh;
+    width: 100vw;
+}
+
+.tooltipContent {
+    h2 {
+        margin: 0 2rem;
+    }
+}
+
+.coordinates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+}
